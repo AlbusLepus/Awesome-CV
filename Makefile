@@ -23,4 +23,5 @@ clean:
 	rm -rf $(EXAMPLES_DIR)/*.pdf
 
 
-cv.pdf: my\cv.tex $(shell find my\cv -name '*.tex') xelatex -output-directory=my cv.pdf
+# my\cv.tex $(shell find my\cv -name '*.tex')
+# 	xelatex -output-directory=my cv.pdf
