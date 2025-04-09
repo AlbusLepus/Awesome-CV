@@ -190,8 +190,8 @@
 \newcommand*{\entrytitledescstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{graytext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\upshape\color{awesome} #1}}
 \newcommand*{\entrypositiondescstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\upshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 \newcommand*{\descriptiontitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{black} #1}}
 
@@ -682,13 +682,13 @@
     \ifempty{#3#4#5}
       {\ifempty{#2}
           {\entrypositionstyle{#1} & \entrydatestyle{#6} \\}
-          {\entrypositionstyle{#1} | \entrypositiondescstyle{#2} & \entrydatestyle{#6} \\}}
+          {\entrypositionstyle{#1}{\enskip|\enskip}\entrypositiondescstyle{#2} & \entrydatestyle{#6} \\}}
       {\ifempty{#4}
           {\entrytitlestyle{#3} & \entrylocationstyle{#5} \\}
-          {\entrytitlestyle{#3} | \entrytitledescstyle{#4} & \entrylocationstyle{#5} \\}
+          {\entrytitlestyle{#3}{\enskip|\enskip}\entrytitledescstyle{#4} & \entrylocationstyle{#5} \\}
         \ifempty{#2}
           {\entrypositionstyle{#1} & \entrydatestyle{#6} \\}
-          {\entrypositionstyle{#1} | \entrypositiondescstyle{#2} & \entrydatestyle{#6} \\}}
+          {\entrypositionstyle{#1}{\enskip|\enskip}\entrypositiondescstyle{#2} & \entrydatestyle{#6} \\}}
     \ifstrempty{#7}
       {}
       {\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#7}} \\}
